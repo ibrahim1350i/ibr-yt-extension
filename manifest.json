@@ -1,9 +1,11 @@
 {
   "manifest_version": 3,
   "name": "Ibr YT Downloader Extension",
-  "version": "1.5.7",
-  "description": "YouTube, Instagram, TikTok vb. videoları direkt indirin — e_token güvenliğiyle",
-  "permissions": ["storage"],
+  "version": "1.1.0",
+  "description": "YouTube, Instagram, TikTok vb. videolar\u0131 direkt indirin \u2014 e_token g\u00fcvenli\u011fiyle",
+  "permissions": [
+    "storage"
+  ],
   "host_permissions": [
     "http://127.0.0.1/*",
     "*://*.youtube.com/*",
@@ -37,8 +39,12 @@
         "*://*.x.com/*",
         "*://*.twitter.com/*"
       ],
-      "js": ["content.js"],
-      "css": ["content.css"],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
       "run_at": "document_end"
     }
   ]
