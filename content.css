@@ -1,0 +1,179 @@
+/* Tüm butonlar için ortak base */
+.ibrdl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.15s ease;
+}
+
+.ibrdl-btn .ibrdl-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Watch sayfası butonu (satır şeklinde, "İndir" yazısı var) */
+.ibrdl-btn:not(.ibrdl-btn--shorts):not(.ibrdl-btn--thumb) {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(20, 20, 20, 0.80);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.ibrdl-btn:not(.ibrdl-btn--shorts):not(.ibrdl-btn--thumb):hover {
+  background: rgba(40, 40, 40, 0.90);
+}
+
+/* Shorts sayfası butonu Kapsayıcısı */
+.ibrdl-shorts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* Shorts sayfası butonu (sadece ikon, yuvarlak) */
+.ibrdl-btn--shorts {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.15s ease;
+  position: relative; /* prevent flying to top left */
+  outline: none;
+}
+
+.ibrdl-shorts-container:hover .ibrdl-btn--shorts {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ibrdl-btn--shorts .ibrdl-icon {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+.ibrdl-shorts-label {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* Thumbnail üstü mini buton (kanal / anasayfa / arama kartları) */
+.ibrdl-btn--thumb {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 9999;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  justify-content: center;
+  padding: 0;
+
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.ibrdl-btn--thumb:hover {
+  background: rgba(40, 40, 40, 0.90);
+}
+
+.ibrdl-btn--thumb .ibrdl-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Toast bildirim */
+.ibrdl-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  animation: ibrdl-toast-in 0.2s ease;
+}
+
+@keyframes ibrdl-toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Instagram grid thumbnail butonu (sol üst — sağdaki ▶ simgesini kapatmaz) */
+.ibrdl-btn--insta-thumb {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 9999;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  justify-content: center;
+  padding: 0;
+
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.ibrdl-btn--insta-thumb:hover {
+  background: rgba(40, 40, 40, 0.90);
+  opacity: 1 !important;
+}
+
+.ibrdl-btn--insta-thumb .ibrdl-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Üzerine gelince butonu göster */
+*:hover > .ibrdl-btn--insta-thumb {
+  opacity: 1;
+}

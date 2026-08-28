@@ -1,0 +1,43 @@
+.ibr-download-btn{
+  position:absolute;
+  top:6px;
+  right:6px;
+  z-index:99999;
+  width:32px;
+  height:32px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  font-size:16px;
+  line-height:32px;
+  text-align:center;
+  background:rgba(0, 255, 136, 0.92);
+  color:#111;
+  box-shadow:0 4px 14px rgba(0,0,0,0.35);
+}
+
+.ibr-download-btn:hover{
+  transform:scale(1.05);
+}
+
+#ibr-download-toast{
+  position:fixed;
+  left:50%;
+  bottom:22px;
+  transform:translateX(-50%);
+  z-index:2147483647;
+  padding:10px 14px;
+  background:rgba(20,20,20,0.92);
+  color:#fff;
+  border-radius:10px;
+  font: 13px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .15s ease-in-out, transform .15s ease-in-out;
+}
+
+#ibr-download-toast.show{
+  opacity:1;
+  transform:translateX(-50%) translateY(-2px);
+}
