@@ -177,3 +177,169 @@
 *:hover > .ibrdl-btn--insta-thumb {
   opacity: 1;
 }
+
+/* YouTube Watch sayfası butonu (native YouTube hap butonlarına tam uyumlu) */
+.ibrdl-btn--watch {
+  height: 36px !important;
+  padding: 0 16px !important;
+  border-radius: 18px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  background: var(--yt-spec-badge-chip-background, rgba(255, 255, 255, 0.1)) !important;
+  color: var(--yt-spec-text-primary, #ffffff) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  transition: background 0.15s ease, transform 0.15s ease !important;
+  flex-shrink: 0 !important;
+  vertical-align: middle !important;
+  box-sizing: border-box !important;
+  line-height: normal !important;
+  margin: 0 4px !important;
+  text-decoration: none !important;
+}
+
+.ibrdl-btn--watch:hover {
+  background: var(--yt-spec-button-chip-background-hover, rgba(255, 255, 255, 0.2)) !important;
+  transform: translateY(-1px) !important;
+}
+
+.ibrdl-btn--watch .ibrdl-icon {
+  width: 18px !important;
+  height: 18px !important;
+  stroke: currentColor !important;
+}
+
+/* TikTok Kaydet / Favori yanındaki İndir Butonu */
+.ibrdl-tiktok-action-wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  margin: 0 6px !important;
+  user-select: none !important;
+  vertical-align: middle !important;
+  transition: transform 0.15s ease !important;
+}
+
+.ibrdl-tiktok-action-wrapper:hover {
+  transform: scale(1.05) !important;
+}
+
+.ibrdl-btn--tiktok-action {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  transition: background 0.15s ease, transform 0.15s ease !important;
+  outline: none !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+.ibrdl-tiktok-action-wrapper:hover .ibrdl-btn--tiktok-action {
+  background: rgba(255, 255, 255, 0.28) !important;
+}
+
+.ibrdl-btn--tiktok-action .ibrdl-icon {
+  width: 18px !important;
+  height: 18px !important;
+  stroke: #ffffff !important;
+}
+
+.ibrdl-tiktok-action-label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1 !important;
+}
+
+/* TikTok Dikey Feed Butonu (Fotoğraf 1 ile birebir: avatarın üstünde tek yuvarlak buton) */
+.ibrdl-btn--tiktok-feed {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  border: none !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  transition: background 0.15s ease, transform 0.15s ease !important;
+  outline: none !important;
+  cursor: pointer !important;
+  margin-bottom: 14px !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+  z-index: 10 !important;
+}
+
+.ibrdl-btn--tiktok-feed:hover {
+  background: rgba(255, 255, 255, 0.28) !important;
+  transform: scale(1.08) !important;
+}
+
+.ibrdl-btn--tiktok-feed .ibrdl-icon {
+  width: 24px !important;
+  height: 24px !important;
+  stroke: #ffffff !important;
+}
+
+/* TikTok Grid / Profil Video Kartı Thumbnail Butonu (Fotoğraf 2 ile birebir: Sol Üst Köşe) */
+.ibrdl-btn--tiktok-thumb {
+  position: absolute !important;
+  top: 8px !important;
+  left: 8px !important;
+  z-index: 999 !important;
+
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+
+  background: rgba(0, 0, 0, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  color: #fff !important;
+  opacity: 0.85 !important;
+  transition: opacity 0.15s ease, transform 0.15s ease, background 0.15s ease !important;
+  cursor: pointer !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+.ibrdl-btn--tiktok-thumb:hover {
+  background: rgba(0, 0, 0, 0.85) !important;
+  opacity: 1 !important;
+  transform: scale(1.08) !important;
+}
+
+.ibrdl-btn--tiktok-thumb .ibrdl-icon {
+  width: 16px !important;
+  height: 16px !important;
+  stroke: #ffffff !important;
+}
+
+
